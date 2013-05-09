@@ -17,8 +17,7 @@ public class HttpServer implements Runnable {
 	public static void main(String[] args) {
 		try {
 			if (args.length != 1) {
-				System.out
-						.println("Here is my web server，default port is: 8080.");
+				System.out.println("Here is my web server，default port is: 8080.");
 			} else if (args.length == 1) {
 				PORT = Integer.parseInt(args[0]);
 			}
@@ -72,9 +71,8 @@ public class HttpServer implements Runnable {
 								break;
 						}
 
-						System.out
-								.println("The clinet requested URL is: 127.0.0.1:8080"
-										+ resource);
+						System.out.println("The clinet requested URL is: 127.0.0.1:8080"
+								+ resource);
 						System.out.println("The clinet requested resource is:"
 								+ resource);
 
