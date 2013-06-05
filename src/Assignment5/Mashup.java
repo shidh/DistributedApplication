@@ -1,4 +1,4 @@
-package Assignment5;
+package A5;
 
 import org.json.*;
 import java.io.*;
@@ -32,7 +32,7 @@ public class Mashup {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		long startTime=System.currentTimeMillis();
 		Location a = new Location();
 		a.setAddress(addressA);
 		GeoUrl = "http://maps.googleapis.com/maps/api/geocode/json?address="
@@ -52,7 +52,13 @@ public class Mashup {
 		ElevationUrl = "http://maps.googleapis.com/maps/api/elevation/json?locations="
 				+ parseLatLng(getJson(GeoUrl)) + "&sensor=false";
 		parseElevation(getJson(ElevationUrl));
-
+		double difference = parseElevation(getJson(ElevationUrl)) - parseElevation(getJson(ElevationUrl));
+		System.out.println("The difference in elevation is :"+ difference);
+		long endTime=System.currentTimeMillis();
+		long time = endTime - startTime;
+		if(time >5000){
+			System.out.println("sorry, time out...");
+		}
 	}
 
 	static String getJson(String gUrl) {
