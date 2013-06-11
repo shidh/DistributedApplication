@@ -32,6 +32,7 @@ public class Mashup {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+<<<<<<< HEAD
 
 		// Start time out thread
 		TimeoutThread t = new TimeoutThread(5000, new TimeoutException(
@@ -70,6 +71,35 @@ public class Mashup {
 			// TODO
 		}
 
+=======
+		long startTime=System.currentTimeMillis();
+		Location a = new Location();
+		a.setAddress(addressA);
+		GeoUrl = "http://maps.googleapis.com/maps/api/geocode/json?address="
+				+ a.getAddress() + "&sensor=false";
+		System.out.println("Address A is :" + a.getAddress());
+		ElevationUrl = "http://maps.googleapis.com/maps/api/elevation/json?locations="
+				+ parseLatLng(getJson(GeoUrl)) + "&sensor=false";
+		parseElevation(getJson(ElevationUrl));
+
+		System.out.println();
+		Location b = new Location();
+		b.setAddress(addressB);
+		GeoUrl = "http://maps.googleapis.com/maps/api/geocode/json?address="
+				+ b.getAddress() + "&sensor=false";
+		System.out.println("Address B is :" + b.getAddress());
+
+		ElevationUrl = "http://maps.googleapis.com/maps/api/elevation/json?locations="
+				+ parseLatLng(getJson(GeoUrl)) + "&sensor=false";
+		parseElevation(getJson(ElevationUrl));
+		double difference = parseElevation(getJson(ElevationUrl)) - parseElevation(getJson(ElevationUrl));
+		System.out.println("The difference in elevation is :"+ difference);
+		long endTime=System.currentTimeMillis();
+		long time = endTime - startTime;
+		if(time >5000){
+			System.out.println("sorry, time out...");
+		}
+>>>>>>> 16f249c8365e2f1f7a6e664a742448337dd9d72c
 	}
 
 	static String getJson(String gUrl) {
