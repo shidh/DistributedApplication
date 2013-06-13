@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript">
+function showCurrency()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+	currency = parseInt(xmlhttp.responseText);
+    document.getElementById("mycurrency").setAttribute("value", currency);
+    }
+  }
+xmlhttp.open("GET","/SubmitPlus",true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<form>
+Your Currency is:
+<input id="mycurrency" type=text name="currency" value=0 disabled>
+<button type="button" onclick="showCurrency()">Plus</button>
+
+</form>
+
+
+</body>
+</html>
