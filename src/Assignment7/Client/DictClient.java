@@ -27,7 +27,7 @@ public class DictClient {
     		setRequest.setId(id1);
     		setRequest.setDescription(des1);
     		setRequest.setUri(uri1);  		
-            DictionaryStub.AddWordResponse response2 = stub.addWord(setRequest);
+                DictionaryStub.AddWordResponse response2 = stub.addWord(setRequest);
     		System.out.println(response2.get_return());
     		
     		//Get list of indexs
