@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ROOT</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description></description>
+    <display-name>Golobal</display-name>
+    <servlet-name>Golobal</servlet-name>
+    <servlet-class>Assignment8A.Golobal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Golobal</servlet-name>
+    <url-pattern>/Golobal</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>Local</display-name>
+    <servlet-name>Local</servlet-name>
+    <servlet-class>Assignment8A.Local</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Local</servlet-name>
+    <url-pattern>/Local</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>GetTimeandWeather</display-name>
+    <servlet-name>GetTimeandWeather</servlet-name>
+    <servlet-class>Assignment8B.GetTimeandWeather</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetTimeandWeather</servlet-name>
+    <url-pattern>/GetTimeandWeather</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>GetPlaceandTemp</display-name>
+    <servlet-name>GetPlaceandTemp</servlet-name>
+    <servlet-class>Assignment8B.GetPlaceandTemp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetPlaceandTemp</servlet-name>
+    <url-pattern>/GetPlaceandTemp</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>SubmitPlus</display-name>
+    <servlet-name>SubmitPlus</servlet-name>
+    <servlet-class>Assignment6.SubmitPlus</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubmitPlus</servlet-name>
+    <url-pattern>/SubmitPlus</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RefreshPlus</display-name>
+    <servlet-name>RefreshPlus</servlet-name>
+    <servlet-class>Assignment6.RefreshPlus</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RefreshPlus</servlet-name>
+    <url-pattern>/RefreshPlus</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>Apache-Axis Servlet</display-name>
+    <servlet-name>AxisServlet</servlet-name>
+    <servlet-class>org.apache.axis.transport.http.AxisServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/servlet/AxisServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>*.jws</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <display-name>Axis Admin Servlet</display-name>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>org.apache.axis.transport.http.AdminServlet</servlet-class>
+    <load-on-startup>100</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/servlet/AdminServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
