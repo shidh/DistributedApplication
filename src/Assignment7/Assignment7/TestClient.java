@@ -11,7 +11,7 @@ public class TestClient {
 		String uri = Utils.getRandomString(1024);
 		
 		String id1 = "apple";
-		String des1 = "ping guo";
+		String des1 = "Apple";
 		String uri1 = "apple.com";
 		
 		operator.addWord(id, des, uri);

@@ -10,7 +10,7 @@ public class DictClient {
     		String uri = Utils.getRandomString(1024);
     		
     		String id1 = "apple";
-    		String des1 = "ping guo";
+    		String des1 = "Apple";
     		String uri1 = "apple.com";
     		
     		//Add first Word
@@ -27,7 +27,8 @@ public class DictClient {
     		setRequest.setId(id1);
     		setRequest.setDescription(des1);
     		setRequest.setUri(uri1);  		
-    		System.out.println(response.get_return());
+                DictionaryStub.AddWordResponse response2 = stub.addWord(setRequest);
+    		System.out.println(response2.get_return());
     		
     		//Get list of indexs
     		DictionaryStub.GetWordInfo getRequest = new DictionaryStub.GetWordInfo();
